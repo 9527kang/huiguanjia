@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "全部评价",
+  "usingComponents": {
+    "van-panel": "/dist/panel/index",
+    "van-rate": "/dist/rate/index",
+    "van-cell": "/dist/cell/index"
+  }
+}

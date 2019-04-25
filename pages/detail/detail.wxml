@@ -1,0 +1,134 @@
+<view class="detail">
+  <view class='detail_banner'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" bindchange="changeBanner">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item.image}}" class="slide-image" mode='aspectFill' />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='swiper_num'>{{current}} / {{imgUrls.length}}</view>
+  </view>
+  <view class='detail_title'>
+
+    <van-cell title="{{hotel.name}}" label="{{hotel.ad}}" value="【{{hotel.type}}】" size="large" value-class="valCol" title-class="titClas" border="{{false}}"></van-cell>
+
+    <view class='detail_rate'>
+      <van-cell value="全部点评" is-link title-class='rateClas' url="/pages/assess/assess?id={{hotel.id}}">
+        <view slot='title'>
+          <van-rate value="{{hotel.score}}" count="5" void-icon="diamond-o" icon="diamond" color="#FAA21B" size="18" readonly></van-rate>
+        </view>
+      </van-cell>
+      <view class='detail_score'>{{hotel.score}}分</view>
+    </view>
+
+    <van-cell title="{{hotel.addr}}" icon="location-o" is-link></van-cell>
+
+    <view class='detail_kind'>
+      <van-row gutter="10">
+          <van-col span="8">
+            <view class='detail_cell'>
+              <image class='detail_icon' src='/image/icon_number.png' mode='aspectFit'></image>
+              <view class='detail_clas'>会议厅</view>
+              <view class='detail_sum'>{{hotel.hall}}个</view>
+            </view>
+          </van-col>
+          <van-col span="8">
+            <view class='detail_cell'>
+              <image class='detail_icon' src='/image/icon_area.png' mode='aspectFit'></image>
+              <view class='detail_clas'>最大面积</view>
+              <view class='detail_sum'>{{hotel.area}}平米</view>
+            </view>
+          </van-col>
+          <van-col span="8">
+            <view class='detail_cell'>
+              <image class='detail_icon' src='/image/icon_hold.png' mode='aspectFit'></image>
+              <view class='detail_clas'>最多容纳</view>
+              <view class='detail_sum'>{{hotel.number}}人</view>
+            </view>
+          </van-col>
+      </van-row>
+    </view>
+
+    <view class='detail_wrap'>
+      <van-cell title="酒店详情" value="查看详情" is-link size="large" border="{{false}}" url="/pages/hall_detail/hall_detail"></van-cell>
+      <view class='detail_cont'>
+        <rich-text nodes="{{hotel.content}}"></rich-text>
+      </view>
+    </view>
+
+    <view class='detail_wrap'>
+      <van-cell title="曾举办的活动" value="查看更多" is-link size="large" border="{{false}}"></van-cell>
+      <view class='detail_cont'>
+        <rich-text nodes="{{hotel.activity}}"></rich-text>
+      </view>
+    </view>
+
+    <view class='detail_tab'>
+      <van-tabs swipeable sticky active="0" nav-class="tabTit" tab-class="tabClas" tab-active-class="tabActive">
+        <van-tab title="会议厅（{{con_room.cou}}）">
+          <view class='detail_hall'>
+            <block wx:for="{{con_room.list}}" wx:key="{{index}}">
+              <navigator url='/pages/hotel_detail/hotel_detail?id={{item.id}}'>
+                <hall-item image="{{item.room_image}}" title="{{item.room_name}}" area="{{item.room_area}}" number="{{item.room_num}}" price="{{item.room_price}}"></hall-item>
+              </navigator>
+            </block>
+          </view>
+          <view class='no_data' bindtap='showMore'>查看更多会议室
+            <image class='icon_down' src='/image/icon_down_sot.png' mode='aspectFit'></image>
+          </view>
+        </van-tab>
+        <van-tab title="客房（{{guset_room.cou}}）">
+          <view class='detail_hall'>
+            <block wx:for="{{guset_room.list}}" wx:key="{{index}}">
+              <navigator url='/pages/hotel_detail/hotel_detail?id={{item.id}}'>
+                <hall-item image="{{item.room_image}}" title="{{item.room_name}}" area="{{item.room_area}}" number="{{item.room_num}}" price="{{item.room_price}}"></hall-item>
+              </navigator>
+            </block>
+          </view>
+          <view class='no_data' bindtap='showMore'>查看更多会议室
+            <image class='icon_down' src='/image/icon_down_sot.png' mode='aspectFit'></image>
+          </view>
+        </van-tab>
+      </van-tabs>
+    </view>
+
+  </view>
+
+  <van-button size='large' custom-class='freeCheck' type='danger' bind:click="checkPrice">免费查档期/报价</van-button>
+</view>
+
+<van-popup position="bottom" bind:close="onClose" show="{{show}}">
+  <view class='tan_box'>
+    <view class='tan_top'>
+      免费查询档期/报价
+      <image class='tan_close' bindtap="onClose" src='/image/icon_guanbi.png' mode='aspectFit'></image>
+    </view>
+    <van-field value="{{ dates }}" label="会议时间" placeholder="例：4月21号-4月24号" bind:change="meetingDates"/>
+    <van-cell title="参与人数" border="{{false}}"></van-cell>
+    <view class='tan_list'>
+      <van-row gutter="8">
+        <van-col span="8" wx:for="{{checkNum}}" wx:key="{{index}}">
+          <view data-id='{{item.id}}' data-name="{{item.name}}" class="border {{item.id === checkNum[active].id ? 'col' : ''}}" bindtap='changeClas'>{{ item.name }}</view>
+        </van-col>
+      </van-row>
+    </view>
+    <van-cell title="其他需求" border="{{false}}"></van-cell>
+    <view class='tan_list'>
+      <van-row gutter="8">
+        <van-col span="8" wx:for="{{checkMent}}" wx:key="{{index}}">
+          <view data-id='{{item.id}}' data-name="{{item.name}}" class="border {{item.id === checkMent[actives].id ? 'col' : ''}}" bindtap='changeClass'>{{ item.name }}</view>
+        </van-col>
+      </van-row>
+    </view>
+
+    <van-field value="{{phone}}" label="手机号码" placeholder="请输入手机号码" bind:change="meetingPhone"></van-field>
+
+    <view class='tan_tips'>
+      <rich-text nodes="{{checkLb.desc}}"></rich-text>
+    </view>
+
+    <van-button size='large' custom-class='send_to' type='danger' bind:click="sendTo">发送给酒店</van-button>
+
+  </view>
+</van-popup>

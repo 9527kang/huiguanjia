@@ -1,0 +1,44 @@
+<view class="order">
+  <van-tabs swipeable active="{{active}}">
+    <van-tab title="全部订单">
+      <view class='order_wrap'>
+        <block wx:for="{{orderData}}" wx:key="{{index}}">
+          <order-item urls="/pages/order_detail/order_detail?id={{item.id}}" title="{{item.hotel}}" room="{{item.room}}" dates="{{item.dates}}" image="{{item.image}}"></order-item>
+        </block>
+        <view class='no_data'>没有更多数据~</view>
+      </view>
+    </van-tab>
+    <van-tab title="待受理">
+      <view class='order_wrap'>
+        <block wx:for="{{2}}" wx:key="{{index}}">
+          <order-item title="2月11日在郑州需要51人场地" show="{{false}}"></order-item>
+        </block>
+        <view class='no_data'>没有更多数据~</view>
+      </view>
+    </van-tab>
+    <van-tab title="待沟通">
+      <view class='order_wrap'>
+        <block wx:for="{{2}}" wx:key="{{index}}">
+          <order-item title="2月11日在郑州需要51人场地" show="{{false}}" notice="{{true}}"></order-item>
+        </block>
+        <view class='no_data'>没有更多数据~</view>
+      </view>
+    </van-tab>
+    <van-tab title="已成交">
+      <view class='order_wrap'>
+        <block wx:for="{{3}}" wx:key="{{index}}">
+          <order-item notice="{{true}}" status="未使用"></order-item>
+        </block>
+        <view class='no_data'>没有更多数据~</view>
+      </view>
+    </van-tab>
+    <van-tab title="待评价">
+      <view class='order_wrap'>
+        <block wx:for="{{1}}" wx:key="{{index}}">
+          <order-item isBtn="{{false}}" isAssess="{{true}}" urls="/pages/issue/issue?id={{item.id}}"></order-item>
+        </block>
+        <view class='no_data'>没有更多数据~</view>
+      </view>
+    </van-tab>
+  </van-tabs>
+</view>

@@ -1,0 +1,25 @@
+/* pages/demand/demand.wxss */
+.bg {
+  text-align: center!important;
+  background: #fff!important;
+  height: 80rpx!important;
+  line-height: 80rpx!important;
+  border-right: 1px solid #f3f3f3!important;
+  margin-bottom: 20rpx!important;
+}
+.kind_clas {
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 16px;
+  text-align: center;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.wrap {
+  padding: 0 20rpx!important;
+}
+
+.kind_box {
+  overflow: hidden;
+}

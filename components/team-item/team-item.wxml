@@ -1,0 +1,14 @@
+<view class="box flex">
+  <image class='pic' src='{{srcs}}' mode='aspectFill'></image>
+  <view class='flex_1'>
+    <view class='flex_between'>
+      <view class='left'>
+        <view class='title'>{{title}}</view>
+        <view class='date'>{{date}}</view>
+      </view>
+      <view class='right'>
+        佣金<text class='jine'>{{jine}}</text>
+      </view>
+    </view>
+  </view>
+</view>

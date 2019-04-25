@@ -1,0 +1,14 @@
+<view class="login">
+  <view class='tips'>绑定手机号，即可查看订单详情</view>
+  <van-cell-group>
+    <van-field placeholder="请输入手机号" value="{{phone}}" bind:change="setPhone" maxlength="11"></van-field>
+    <van-field placeholder="请输入密码" type="password" value="{{pwd}}" bind:change="setPwd"></van-field>
+  </van-cell-group>
+  <view class='login_btn'>
+    <van-button type='danger' size='large' custom-class='loginBtn' bind:click="loginBtn">登录</van-button>
+  </view>
+  <view class='login_func flex_between'>
+    <view class='left' bindtap='toRegist'>立即注册</view>
+    <view class='right' bindtap='toPwd'>忘记密码</view>
+  </view>
+</view>

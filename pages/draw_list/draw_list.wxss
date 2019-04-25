@@ -1,0 +1,19 @@
+/* pages/draw_list/draw_list.wxss */
+.jilu_box {
+  padding: 24rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #f3f3f3;
+}
+
+.right {
+  text-align: center;
+}
+
+.date {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.count {
+  color: #f44;
+}

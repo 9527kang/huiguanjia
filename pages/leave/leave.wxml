@@ -1,0 +1,6 @@
+<view class="leave">
+  <van-field label="留言" type="textarea" autosize placeholder="请输入留言" input-class="area_ht" />
+  <view class='leave_btn'>
+    <van-button type='danger' size='large' custom-class='confirm_btn' bind:click="confirmSuccess">提交</van-button>
+  </view>
+</view>

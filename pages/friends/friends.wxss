@@ -1,0 +1,79 @@
+/* pages/friends/friends.wxss */
+.mar_btm {
+  margin-bottom: 20rpx;
+}
+.top {
+  background: #fff;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: wrap;
+  margin-top: 40rpx;
+}
+
+.center {
+  box-sizing: border-box;
+  width: 310rpx;
+  text-align: center;
+  padding: 40rpx;
+  margin-bottom: 40rpx;
+  color: #fff
+}
+
+.num {
+  font-size: 16px;
+}
+
+.center.red {
+  background-color: #FF6969
+}
+
+.center.qing {
+  background-color: #00CCCB;
+}
+
+.center.blue {
+  background-color: #0099FF;
+}
+
+.center.green {
+  background-color: #00CC65;
+}
+
+.tan_box {
+  position: relative;
+  width: 544rpx;
+  height: 887rpx;
+}
+
+.tan_bg {
+  position: absolute;
+  width: 544rpx;
+  height: 887rpx;
+  left: 0;
+  top: 0;
+}
+
+.tan_ewm {
+  position: absolute;
+  left: 50%;
+  bottom: 210rpx;
+  transform: translateX(-50%);
+  width: 202rpx;
+  height: 202rpx;
+}
+
+.bg_transparent {
+  background-color: transparent!important;
+}
+
+.tan_close {
+  width: 60rpx;
+  height: 60rpx;
+  display: block;
+  margin: 0 auto;
+}

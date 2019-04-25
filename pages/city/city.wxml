@@ -1,0 +1,14 @@
+<view class="city">
+  <view class='common_ht'>定位城市</view>
+  <van-cell title="{{currentCity}}" bind:click="toIndex" data-name="{{currentCity}}"></van-cell>
+  <view class='common_ht'>已开通全部城市</view>
+  <view class='city_box'>
+    <van-row>
+      <van-col span="6" wx:for="{{city}}" wx:key="{{index}}" custom-class="bg" bindtap="toIndex" data-name="{{item.name}}" data-id="{{item.id}}">
+        <view>{{item.name}}</view>
+      </van-col>
+    </van-row>
+  </view>
+  <view class='no_data'>其他城市我们正在加速开拓，敬请期待！</view>
+
+</view>

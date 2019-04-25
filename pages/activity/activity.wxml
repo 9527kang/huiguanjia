@@ -1,0 +1,4 @@
+<!--pages/activity/activity.wxml-->
+<view class='activity'>
+  <rich-text nodes="曾举办的活动"></rich-text>
+</view>

@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "申请状态",
+  "usingComponents": {
+    "van-field": "/dist/field/index",
+    "van-cell": "/dist/cell/index",
+    "van-button": "/dist/button/index",
+    "van-steps": "/dist/steps/index",
+    "van-popup": "/dist/popup/index",
+    "van-row": "/dist/row/index",
+    "van-col": "/dist/col/index"
+  }
+}

@@ -1,0 +1,14 @@
+<!--pages/publish/publish.wxml-->
+<view class='publish'>
+  <view class='publish_center'>
+    <van-icon name="checked" size='96px' color='#f44' />
+    <view class='publish_title'>需求提交成功</view>
+    <view class='publish_cont'>稍后会务专员致电与您细化会议需求您将免费收到3-6套精选场地报价</view>
+    <view class="align_center" style="margin-top:12px;">
+      <van-button bind:click="backIndex" type="danger" round>返回首页</van-button>
+    </view>
+  </view>
+  <view class='publish_steps'>
+    <van-steps steps="{{ steps }}" active="{{ 3 }}" direction="vertical" active-color="#f44" />
+  </view>
+</view>

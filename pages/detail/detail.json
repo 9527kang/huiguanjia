@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "van-panel": "/dist/panel/index",
+    "van-cell": "/dist/cell/index",
+    "van-rate": "/dist/rate/index",
+    "van-icon": "/dist/icon/index",
+    "van-row": "/dist/row/index",
+    "van-col": "/dist/col/index",
+    "van-button": "/dist/button/index",
+    "van-tabs": "/dist/tabs/index",
+    "van-tab": "/dist/tab/index",
+    "hall-item": "/components/hall-item/hall-item",
+    "van-popup": "/dist/popup/index",
+    "van-field": "/dist/field/index"
+  }
+}

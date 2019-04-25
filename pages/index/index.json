@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-row": "/dist/row/index",
+    "van-col": "/dist/col/index",
+    "van-cell": "/dist/cell/index",
+    "van-cell-group": "/dist/cell-group/index",
+    "van-field": "/dist/field/index",
+    "van-checkbox": "/dist/checkbox/index",
+    "van-checkbox-group": "/dist/checkbox-group/index"
+  }
+}

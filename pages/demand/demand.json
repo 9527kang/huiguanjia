@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "会议需求",
+  "usingComponents": {
+    "van-row": "/dist/row/index",
+    "van-col": "/dist/col/index",
+    "van-cell": "/dist/cell/index",
+    "van-cell-group": "/dist/cell-group/index",
+    "van-checkbox": "/dist/checkbox/index",
+    "van-checkbox-group": "/dist/checkbox-group/index",
+    "van-button": "/dist/button/index"
+  }
+}

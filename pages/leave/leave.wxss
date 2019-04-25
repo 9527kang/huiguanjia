@@ -1,0 +1,12 @@
+/* pages/leave/leave.wxss */
+.leave_btn {
+  padding: 30rpx;
+}
+
+.confirm_btn {
+  border-radius: 12rpx!important;
+}
+
+.area_ht {
+  height: 140rpx!important;
+}

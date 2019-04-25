@@ -1,0 +1,7 @@
+/* pages/hall_detail/hall_detail.wxss */
+page {
+  background: #fff;
+}
+.hall_btn {
+  padding: 0 24rpx 24rpx;
+}

@@ -1,0 +1,45 @@
+<view class="detail">
+  <view class='detail_banner'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" bindchange="changeBanner">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item.image}}" class="slide-image" mode='aspectFill' />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='swiper_num'>{{current}} / {{imgUrls.length}}</view>
+    <view class='swiper_title'>
+      {{room.room_name}}
+      <image class='swiper_close' src='/image/icon_guanbi.png' mode='aspectFit'></image>
+    </view>
+  </view>
+
+  <view class='detail_price flex_between'>
+    <view class='detail_title'>市场参考价</view>
+    <view class='detail_num'>
+      <view class='detail_cont'>
+        ¥<text>{{room.room_sprices}}</text>/全天
+      </view>
+      <view class='detail_cont'>
+        ¥<text>{{room.room_sprice}}</text>/半天
+      </view>
+    </view>
+  </view>
+
+  <view class='detail_price flex_between'>
+    <view class='detail_title'>会管家特惠价</view>
+    <view class='detail_num col'>
+      <view class='detail_cont'>
+        ¥<text>{{room.room_xprices}}</text>/全天
+      </view>
+      <view class='detail_cont'>
+        ¥<text>{{room.room_xprice}}</text>/半天
+      </view>
+    </view>
+  </view>
+
+  <view class='detail_container'>
+    <rich-text nodes="{{room.room_content}}"></rich-text>
+  </view>
+
+</view>

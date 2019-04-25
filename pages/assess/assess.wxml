@@ -1,0 +1,19 @@
+<!--pages/assess/assess.wxml-->
+<view class='assess'>
+  <block wx:for="{{assess}}" wx:key="{{index}}">
+    <view class='assess_item'>
+      <image class='assess_thumb' src='{{item.image}}' mode='aspectFit'></image>
+      <view class='assess_txt'>
+        <van-cell value="{{item.addtime}}" border="{{false}}" custom-class="assess_rate">
+          <view slot="title">
+            <van-rate value="{{item.number}}" count="5" void-icon="diamond-o" icon="diamond" color="#FAA21B" size="18" readonly></van-rate>
+          </view>
+        </van-cell>
+          <view>{{item.content}}</view>
+      </view>
+    </view>
+  </block>
+
+  <view class='no_data'>没有更多评价了~</view>
+
+</view>

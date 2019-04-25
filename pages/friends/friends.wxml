@@ -1,0 +1,44 @@
+<view class="friend">
+  <view class='top mar_btm'>
+    <view class='flex'>
+      <view class='center red'>
+        <view class='title'>我的佣金(¥)</view>
+        <view class='num'>{{friendData.money}}</view>
+      </view>
+      <view class='center qing'>
+        <view class='title'>提现金额(¥)</view>
+        <view class='num'>{{friendData.already_money}}</view>
+      </view>
+      <view class='center blue'>
+        <view class='title'>我的业绩(人)</view>
+        <view class='num'>{{friendData.achievement}}</view>
+      </view>
+      <view class='center green'>
+        <navigator url='/pages/team/team'>
+          <view class='title'>我的团队(人)</view>
+          <view class='num'>{{friendData.team}}</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class='mar_btm'>
+    <van-cell-group>
+      <van-cell title="提现" is-link url="/pages/withdraw/withdraw"></van-cell>
+      <van-cell title="提现记录" is-link url="/pages/draw_list/draw_list"></van-cell>
+    </van-cell-group>
+  </view>
+  <view class='mar_btm'>
+    <van-cell-group>
+      <van-cell title="我的团队" is-link url="/pages/team/team"></van-cell>
+      <van-cell title="分销邀请" is-link bind:click="showPopup"></van-cell>
+    </van-cell-group>
+  </view>
+</view>
+
+<van-popup show="{{show}}" custom-class="bg_transparent">
+  <view class='tan_box'>
+    <image class='tan_bg' src='/image/icon_tan_bg.png' mode='aspectFit'></image>
+    <image class='tan_ewm' src='http://img.atobo.com/ProductImg/EWM/UWeb/2/4/9/0/3225/24903225/1.gif' mode='aspectFit'></image>
+  </view>
+  <image class='tan_close' bindtap='onClose' src='/image/icon_tan_close.png' mode='aspectFit'></image>
+</van-popup>

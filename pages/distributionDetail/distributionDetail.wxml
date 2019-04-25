@@ -1,0 +1,6 @@
+<view class="team_list">
+  <block wx:for="{{detailData}}" wx:key="{{index}}">
+    <team-item srcs="{{item.image}}" title="{{item.nickname}}" date="{{item.time}}" jine="{{item.money}}"></team-item>
+  </block>
+  <view class='no_data'>没有更多成员了~</view>
+</view>

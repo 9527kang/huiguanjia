@@ -1,0 +1,52 @@
+<!--pages/person/person.wxml-->
+<view class='person'>
+  <view class='person_top mar_btm'>
+    <image class='person_thumb' src='/image/icon_placeholder.png' mode='aspectFit' bindtap='toInfor'></image>
+    <view class='person_txt'>
+      <view class='person_nickname' bindtap='toLogin'>点此登录</view>
+      <view class='person_id'>欢迎使用会管家</view>
+    </view>
+  </view>
+
+  <view class='person_top mar_btm'>
+    <image class='person_thumb' src='/image/icon_thumb.png' mode='aspectFit' bindtap='toInfor'></image>
+    <view class='person_txt'>
+      <view class='person_nickname' bindtap='toInfor'>昵称昵称</view>
+      <view class='person_id'>ID:12345678</view>
+    </view>
+  </view>
+
+  <view class="mar_btm">
+    <view class="flex_around bg_white font_16">
+      <view class="person_bd p12 align_center">
+        <view class="mar_btm_6">0</view>
+        <view>余额</view>
+      </view>
+      <view class="person_bd p12 align_center">
+        <view class="mar_btm_6">0</view>
+        <view>积分</view>
+      </view>
+      <view class="person_bd p12 align_center">
+        <view class="mar_btm_6">0</view>
+        <view>优惠券</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='mar_btm'>
+    <van-cell title="申请加入" is-link url="/pages/join/join"></van-cell>
+    <van-cell title="营销中心" is-link url="/pages/market/market"></van-cell>
+  </view>
+
+  <view class='mar_btm'>
+    <van-cell title="我的订单" is-link url="/pages/order/order"></van-cell>
+    <van-cell title="我的顾问" is-link url="/pages/question/question"></van-cell>
+  </view>
+
+  <view class='mar_btm'>
+    <van-cell title="推荐的好友列表" is-link url="/pages/friends/friends"></van-cell>
+    <van-cell title="意见反馈" is-link url="/pages/leave/leave"></van-cell>
+  </view>
+
+  <view class='person_quit' bindtap='toLogin'>退出当前账号</view>
+</view>

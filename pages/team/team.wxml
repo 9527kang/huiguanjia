@@ -1,0 +1,22 @@
+<view class="team">
+  <van-tabs swipeable>
+    <van-tab title="一级分销成员">
+      <view class='mar_top'>
+        <block wx:for="{{teamData}}" wx:key="{{index}}">
+          <navigator url='/pages/distributionDetail/distributionDetail?userid={{item.userid}}'>
+            <distribution-item srcs="{{item.image}}" heng="{{item.nickname}}" ids="{{item.phone}}" num="{{item.cou}}"></distribution-item>
+          </navigator>
+        </block>
+        <view class='no_data'>没有更多分销成员~</view>
+      </view>
+    </van-tab>
+    <van-tab title="二级分销成员">
+      <view class='mar_top'>
+        <block wx:for="{{myTeamData}}" wx:key="{{index}}">
+          <distribution-item srcs="{{item.image}}" heng="{{item.nickname}}" ids="{{item.phone}}" show="{{false}}"></distribution-item>
+        </block>
+        <view class='no_data'>没有更多分销成员~</view>
+      </view>
+    </van-tab>
+  </van-tabs>
+</view>

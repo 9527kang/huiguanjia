@@ -1,0 +1,28 @@
+/* pages/order_detail/order_detail.wxss */
+page {
+  padding-bottom: 40rpx;
+}
+.order_item {
+  overflow: hidden;
+  padding: 20rpx 30rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f3f3f3;
+}
+
+.order_item:nth-child(odd) {
+  background: #f3f3f3;
+}
+
+.order_item .title {
+  float: left;
+  width: 180rpx;
+}
+
+.order_item .cont {
+  margin-left: 192rpx;
+}
+
+.order_step {
+  padding: 24rpx;
+  background: #fff;
+}

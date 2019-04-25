@@ -1,0 +1,14 @@
+<view class="issue">
+  <view class='issue_cell flex'>
+    <image class='issue_thumb' src='/image/distribution_thumb.png' mode='aspectFill'></image>
+    <view class='issue_txt'>服务评价</view>
+  </view>
+  <van-cell value="非常好" border="{{false}}">
+    <view slot="title">
+      <van-rate size="18" icon="diamond" void-icon="diamond-o" value="{{number}}" count="5" bind:change="rateChange"></van-rate>
+    </view>
+  </van-cell>
+  <van-field type="textarea" placeholder="满足自己的期待了吗？说说它的优点缺点吧" input-class="area_ht" bind:change="saveContent"></van-field>
+</view>
+
+<van-button size='large' type='danger' custom-class='issue_btn' bind:click="issueBtn">提交评价</van-button>

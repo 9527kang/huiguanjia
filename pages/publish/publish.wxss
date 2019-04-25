@@ -1,0 +1,21 @@
+/* pages/publish/publish.wxss */
+page {
+  background: #fff;
+}
+.publish_center {
+  padding: 40rpx 80rpx;
+  text-align: center;
+}
+
+.publish_title {
+  font-size: 18px;
+  margin: 40rpx 0;
+}
+
+.publish_cont {
+  color: #8c8c8c;
+}
+
+.publish_steps {
+  padding: 40rpx;
+}

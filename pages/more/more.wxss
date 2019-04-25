@@ -1,0 +1,38 @@
+/* pages/search/search.wxss */
+.search_top {
+  display: flex;
+  align-items: center;
+  padding: 0 24rpx;
+  border-top: 1rpx solid #efefef;
+  background-color: #fff;
+}
+
+.search_left {
+  width: 100rpx;
+}
+
+.search_right {
+  flex: 1;
+  overflow: hidden;
+}
+
+.search_right .van-cell {
+  border-radius: 100rpx!important;
+  background-color: #f3f3f3!important;
+}
+
+.search_list {
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #efefef;
+  background-color: #fff;
+}
+
+.filter_btn {
+  height: 80rpx!important;
+  line-height: 76rpx!important;
+}
+
+.filter {
+  padding: 24rpx 20rpx;
+  border-top: 1rpx solid #f3f3f3;
+}

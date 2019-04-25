@@ -1,0 +1,16 @@
+/* components/show-down/show-down.wxss */
+.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: #8c8c8c;
+}
+
+.icon {
+  margin-left: 8rpx;
+  width: 24rpx;
+  height: 14rpx;
+}

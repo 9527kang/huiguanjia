@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "一级分销详情",
+  "usingComponents": {
+    "team-item": "/components/team-item/team-item"
+  }
+}

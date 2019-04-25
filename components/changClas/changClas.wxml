@@ -1,0 +1,5 @@
+<van-row gutter="8">
+    <van-col span="8" wx:for="{{arrData}}" wx:key="{{index}}">
+      <view data-oid='{{item.oid}}' data-oname="{{item.oname}}" class="border {{item.oid === arrData[active].oid ? 'col' : ''}}" bindtap='changeClas'>{{ item.oname }}</view>
+    </van-col>
+</van-row>

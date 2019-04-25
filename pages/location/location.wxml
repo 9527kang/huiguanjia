@@ -1,0 +1,80 @@
+<view class='search'>
+  <!-- 搜索框 -->
+  <view class='search_top'>
+    <view class='search_right'>
+      <van-search placeholder="目的地、酒店名称、关键词" background="transparent" bind:search="souKeywords"></van-search>
+    </view>
+  </view>
+
+  <!-- 搜索分类 -->
+  <view class='search_list'>
+    <van-row>
+      <van-col span="8">
+        <show-down title="{{quyu}}" bindtap="showArea"></show-down>
+      </van-col>
+      <van-col span="8">
+        <show-down title="{{shunxu}}" bindtap="showTurn"></show-down>
+      </van-col>
+      <van-col span="8">
+        <show-down title="{{shaixuan}}" bindtap="showFilter"></show-down>
+      </van-col>
+    </van-row>
+  </view>
+
+  <!-- 酒店列表 -->
+  <view class='hotel_list'>
+    <block wx:for="{{hotelData}}" wx:key="{{index}}">
+      <hotel-item urls="/pages/detail/detail?id={{item.id}}" title="{{item.name}}" src="{{item.image}}" location="{{item.addr}}" rank="{{item.type}}" sum="{{item.hall}}" area="{{item.area}}" num="{{item.number}}"></hotel-item>
+    </block>
+  </view>
+
+  <!-- 没数据 -->
+  <view class='no_data'>没有更多数据~</view>
+</view>
+
+<!-- 区域弹窗 -->
+<van-popup show="{{area}}" bind:close="onClose" position="bottom">
+  <view class='common_ht'>区域列表</view>
+  <view class='pad20'>
+    <van-row gutter='8'>
+      <van-col span="8" wx:for="{{areas}}" wx:key="{{index}}">
+      <view data-oid='{{item.oid}}' data-oname="{{item.oname}}" class="border {{item.oid === areas[active].oid ? 'col' : ''}}" bindtap='changeClas'>{{ item.oname }}</view>
+    </van-col>
+    </van-row>
+  </view>
+</van-popup>
+
+<!-- 推荐顺序弹窗 -->
+<van-popup show="{{turn}}" bind:close="onClose" position="bottom">
+  <van-picker columns="{{ columns }}" bind:change="onChange" />
+</van-popup>
+
+<!-- 分类筛选弹窗 -->
+<van-popup show="{{filter}}" bind:close="onClose" position="bottom">
+  <view class='common_ht'>场地类型</view>
+  <view class='pad20'>
+    <chang-clas arrData="{{ places }}" bind:click="getTid"></chang-clas>
+  </view>
+  <view class='common_ht'>会场面积</view>
+  <view class='pad20'>
+    <chang-clas arrData="{{ areass }}" bind:click="getAid"></chang-clas>
+  </view>
+  <view class='common_ht'>容纳人数</view>
+  <view class='pad20'>
+    <chang-clas arrData="{{ peoples }}" bind:click="getNid"></chang-clas>
+  </view>
+  <view class='common_ht'>参考价格</view>
+  <view class='pad20'>
+    <chang-clas arrData="{{ prices }}" bind:click="getMid"></chang-clas>
+  </view>
+  <view class='filter'>
+    <van-row gutter="10">
+      <van-col span="12">
+        <van-button type='danger' size='large' plain round custom-class="filter_btn">重置</van-button>
+      </van-col>
+      <van-col span="12">
+        <van-button bind:click="onSure" type='danger' size='large' round custom-class="filter_btn">确定</van-button>
+      </van-col>
+    </van-row>
+  </view>
+</van-popup>

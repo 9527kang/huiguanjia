@@ -1,0 +1,7 @@
+/* pages/city/city.wxss */
+.bg {
+  text-align: center!important;
+  background: #fff!important;
+  height: 80rpx!important;
+  line-height: 80rpx!important;
+}

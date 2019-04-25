@@ -1,0 +1,22 @@
+<view class="duration">
+  <view class='common_ht'>会议时长</view>
+  <view class='duration_box'>
+    <van-row gutter="10">
+      <van-col span="12" wx:for="{{times}}" wx:key="{{index}}" data-name="{{item.name}}" data-index="{{index}}" bindtap="clasTab">
+        <view class="bg {{active === index ? 'active' : '' }}">{{item.name}}</view>
+      </van-col>
+    </van-row>
+  </view>
+  <view class='common_ht'>会议时间</view>
+  <view class='duration_box'>
+    <van-cell title="{{ currentDate }}" is-link bind:click="showTime"></van-cell>
+  </view>
+  <view class="duration_box">
+    <van-button bindtap="toIndex" type="danger" size="large">确认</van-button>
+  </view>
+  
+</view>
+
+<van-popup show="{{show}}" bind:close="onClose" position="bottom">
+  <van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" min-date="{{today}}" bind:cancel="onClose" bind:confirm="timeSure" />
+</van-popup>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的团队",
+  "usingComponents": {
+    "van-tabs": "/dist/tabs/index",
+    "van-tab": "/dist/tab/index",
+    "distribution-item": "/components/distribution-item/distribution-item"
+  }
+}

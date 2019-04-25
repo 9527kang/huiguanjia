@@ -1,0 +1,13 @@
+/* pages/duration/duration.wxss */
+.bg {
+  text-align: center!important;
+  background: #fff!important;
+  height: 80rpx!important;
+  line-height: 80rpx!important;
+  border-right: 1px solid #f3f3f3!important;
+  margin-bottom: 20rpx!important;
+}
+
+.duration_box {
+  padding: 0 20rpx;
+}

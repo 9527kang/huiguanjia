@@ -1,0 +1,10 @@
+<!--pages/hall_detail/hall_detail.wxml-->
+<view class='hall'>
+  <van-cell title="郑州红山楂树酒店" size="large" border="{{false}}"></van-cell>
+  <view class='hall_btn'>
+    <van-button plain size="large" round type="danger">酒店总机 0371-12345678</van-button>
+  </view>
+  <view class='hall_cont'>
+    <rich-text nodes="更多详情"></rich-text>
+  </view>
+</view>

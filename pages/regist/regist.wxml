@@ -1,0 +1,31 @@
+<view class="login">
+  <view class='tips'>绑定手机号，即可查看订单详情</view>
+  <van-cell-group>
+    <van-cell title="{{degreeTitle}}" is-link bindtap="showRadio"></van-cell>
+    <van-field placeholder="请输入手机号" maxlength="{{11}}" value="{{phoneNum}}" bind:change="setPhone"></van-field>
+    <van-field placeholder="验证码" value="{{code}}" maxlength="{{4}}" use-button-slot bind:change="pushCode">
+      <van-button slot="button" size='small' type='warning' bind:click="getCode" disabled="{{disabled}}">{{codeText}}</van-button>
+    </van-field>
+    <van-field placeholder="密码" type="password" value="{{pwd1}}" bind:change="setPwd"></van-field>
+    <van-field placeholder="再次输入密码" type="password" value="{{pwd2}}" bind:change="confirmPwd"></van-field>
+  </van-cell-group>
+  <view class='login_btn'>
+    <van-button type='danger' size='large' custom-class='loginBtn' bind:click="comfirmBtn">确定注册</van-button>
+  </view>
+  
+</view>
+
+<van-popup show="{{ showChoice }}" bind:close="onClose" custom-class="showChoice">
+  <view class="degree_title">请选择身份</view>
+  <view>
+    <van-radio-group value="{{ radio }}" bind:change="onChange">
+      <van-cell-group>
+        <block wx:for="{{degreeText}}" wx:key="{{index}}">
+          <van-cell title="{{item.name}}" clickable data-name="{{index}}" data-title="{{item.name}}" bind:click="chooseDegree">
+            <van-radio name="{{index}}" checked-color="#FF6969" />
+          </van-cell>
+        </block>
+      </van-cell-group>
+    </van-radio-group>
+  </view>  
+</van-popup>

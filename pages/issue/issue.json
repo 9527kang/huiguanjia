@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "发表评价",
+  "usingComponents": {
+    "van-field": "/dist/field/index",
+    "van-rate": "/dist/rate/index",
+    "van-button": "/dist/button/index",
+    "van-cell": "/dist/cell/index"
+  }
+}

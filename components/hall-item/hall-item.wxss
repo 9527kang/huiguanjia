@@ -1,0 +1,55 @@
+/* components/hall-item/hall-item.wxss */
+.text_ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.hall {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24rpx 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: #fff;
+}
+
+.hall_pic {
+  width: 164rpx;
+  height: 126rpx;
+  margin-right: 20rpx;
+}
+
+.hall_mid {
+  flex: 1;
+  overflow: hidden;
+}
+
+.hall_title {
+  font-size: 16px;
+}
+
+.hall_area {
+  font-size: 14px;
+  color: #8c8c8c;
+}
+
+.hall_right {
+  text-align: center;
+}
+
+.hall_price text {
+  font-size: 16px;
+}
+
+.hall_can {
+  font-size: 12px;
+  color: #999;
+}
+
+.btnClas {
+  background-color: #E6A226!important;
+  border-color: #E6A226!important;
+}

@@ -1,0 +1,49 @@
+/* components/distribution-item/distribution-item.wxss */
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.box {
+  padding: 12rpx 24rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.flex_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.id {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.flex_1 {
+  flex: 1;
+  overflow: hidden;
+}
+
+.icon_person {
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.pic {
+  width: 78rpx;
+  height: 78rpx;
+  margin-right: 20rpx;
+}
+
+.icon {
+  width: 15rpx;
+  height: 30rpx;
+}
+
+.num {
+  margin: 0 12rpx;
+  font-size: 12px;
+}
+

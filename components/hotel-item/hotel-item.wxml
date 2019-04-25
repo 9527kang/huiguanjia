@@ -1,0 +1,18 @@
+<!--components/hotel-item/hotel-item.wxml-->
+<view class='hotel'>
+  <navigator url='{{urls}}'>
+    <image class='hotel_thumb' src='{{src}}' mode='aspectFill'></image>
+  </navigator>
+  <navigator url='{{urls}}' class='hotel_txt'>
+    <view class='hotel_title text_ellipsis'>{{title}}</view>
+
+    <view class='hotel_btm'>
+      <view class='hotel_type text_ellipsis'>
+        <text class='hotel_location'>{{location}}</text>
+        <text class='hotel_rank'>{{rank}}</text>
+      </view>
+      <view class='hotel_max text_ellipsis'>最大会场：{{area}}平米/{{num}}人</view>
+      <view class='hotel_total text_ellipsis'>客房总数:{{sum}}间</view>
+    </view>
+  </navigator>
+</view>

@@ -1,0 +1,141 @@
+<view class="container">
+
+  <!-- 轮播图 -->
+  <view class='box'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" circular="{{circular}}">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item.image}}" class="slide-image" mode='aspectFill'/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 搜索图标 -->
+    <view class='search'>
+      <navigator url='/pages/search/search' open-type='switchTab'>
+        <image src='/image/icon_search_white.png' mode='aspectFit'></image>
+      </navigator>
+    </view>
+    <!-- 定位 -->
+    <view class='location'>
+      <view class='location_box' bindtap="toCitys">
+        <text>{{indexCity}}</text>
+        <image src='/image/icon_down.png' mode='aspectFit'></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 发布需求 -->
+  <view class='publish wrap'>
+    <form action="">
+      <van-row>
+        <van-col span="24">
+          <van-cell title="{{indexCity}}" is-link url="/pages/city/city"></van-cell>
+        </van-col>
+        <van-col span="12">
+          <van-cell title="{{indexType}}" is-link url="/pages/kind/kind"></van-cell>
+        </van-col>
+        <van-col span="12">
+          <van-cell title="{{indexTimes}}" is-link url="/pages/duration/duration"></van-cell>
+        </van-col>
+        <van-col span="12">
+          <van-cell title="{{indexNumber}}" is-link url="/pages/numb/numb"></van-cell>
+        </van-col>
+        <van-col span="12">
+          <van-cell title="{{indexMoney}}" is-link url="/pages/budget/budget"></van-cell>
+        </van-col>
+        <van-col span="24">
+          <van-cell title="{{indexMent}}" is-link url="/pages/demand/demand"></van-cell>
+        </van-col>
+        <van-col span="24">
+          <van-field label="联系电话" bind:change="onTel" value="{{indexTel}}" maxlength="11" />
+        </van-col>
+        <van-col span="24">
+          <van-field label="备注" bind:change="onBei" value="{{indexBei}}" type="textarea" input-class="area_ht" />
+        </van-col>
+      </van-row>
+    </form>
+    <view class='publish_confirm'>
+      <button type='submit' class='publish_btn' bindtap="toPublish">发布需求</button>
+    </view>
+    <!-- 发布成功跳转到publish.wxml页面 -->
+  </view>
+
+  <!-- 提示信息 -->
+  <view class='tips wrap'>
+    <image class='tips_icon' src='/image/icon_warning.png' mode='aspectFit'></image>
+    <view class='tips_txt'>{{demand.desc}}</view>
+  </view>
+
+  <!-- 服务保障 -->
+  <view class='ensure'>
+    <view class='ensure_title'>会管家服务保障</view>
+    <view class='ensure_list'>
+      <van-row gutter="10">
+        <van-col span="8" wx:for="{{ensure}}" wx:key="{{index}}">
+          <image class='ensure_icon' src='{{item.image}}' mode='aspectFit'></image>
+          <view class='ensure_txt text_ellipsis'>{{item.name}}</view>
+        </van-col>
+      </van-row>
+    </view>
+  </view>
+
+  <!-- 通过会管家举办的会议 -->
+  <view class='hotel'>
+    <view class='hotel_title'>
+      <van-cell title="通过会管家举办的会议" value="更多" is-link border="{{false}}" title-class="common_title" url="/pages/more/more"></van-cell>
+    </view>
+
+    <scroll-view class='hotel_list' scroll-x="true">
+      <view class='hotel_item' wx:for="{{meeting}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="toDetails">
+        <image class='hotel_pic' src='{{item.image}}' mode='aspectFill'></image>
+        <view class='hotel_txt'>
+          <view class='hotel_name text_ellipsis'>{{item.name}}</view>
+          <view class='hotel_location hotel_common'>{{item.company}}</view>
+          <view class='hotel_rank hotel_common'>{{item.hotel}}</view>
+        </view>
+      </view>
+    </scroll-view>
+
+  </view>
+
+  <!-- 热门会议酒店 -->
+  <view class='hotel'>
+    <view class='hotel_title'>
+      <van-cell title="热门会议酒店" value="更多" is-link border="{{false}}" title-class="common_title" url="/pages/more/more"></van-cell>
+    </view>
+
+    <scroll-view class='hotel_list' scroll-x="true">
+      <view class='hotel_item' wx:for="{{hot}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="toDetails">
+        <image class='hotel_pic' src='{{item.image}}' mode='aspectFill'></image>
+
+        <view class='hotel_txt'>
+          <view class='hotel_name text_ellipsis'>{{item.name}}</view>
+          <view class='hotel_location hotel_common'>{{item.addr}}</view>
+        </view>
+      </view>
+    </scroll-view>
+
+  </view>
+
+  <!-- 精选会议场地 -->
+  <view class='hotel'>
+    <view class='hotel_title'>
+      <van-cell title="精选会议场地" value="更多" is-link border="{{false}}" title-class="common_title" url="/pages/more/more"></van-cell>
+    </view>
+
+    <scroll-view class='hotel_list' scroll-x="true">
+      <view class='hotel_item' wx:for="{{choice}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="toDetails">
+        <image class='hotel_pic' src='{{item.image}}' mode='aspectFill'></image>
+
+        <view class='hotel_txt'>
+          <view class='hotel_name text_ellipsis'>{{item.name}}</view>
+          <view class='hotel_location hotel_common'>{{item.addr}}</view>
+          <view class='hotel_rank hotel_common'>{{item.type}}</view>
+          <view class='hotel_max hotel_common'>最大面积：{{item.area}}平米</view>
+        </view>
+      </view>
+    </scroll-view>
+
+  </view>
+
+</view>

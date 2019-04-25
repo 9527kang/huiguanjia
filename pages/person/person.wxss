@@ -1,0 +1,61 @@
+/* pages/person/person.wxss */
+page {
+  background-color: #f3f3f3;
+}
+.person_top {
+  display: flex;
+  align-items: center;
+  padding: 80rpx 40rpx;
+  background-color: #f44;
+}
+
+.person_thumb {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  overflow: hidden;
+}
+
+.person_txt {
+  flex: 1;
+  overflow: hidden;
+  color: #fff;
+}
+
+.person_nickname {
+  font-size: 18px;
+  margin-bottom: 12rpx;
+}
+
+.mar_btm {
+  margin-bottom: 20rpx;
+}
+
+.person_quit {
+  margin-top: 80rpx;
+  padding-bottom: 60rpx;
+  text-align: center;
+  font-size: 16px;
+  color: #f44;
+}
+
+.person_bd {
+  position: relative;
+  flex: 1;
+}
+
+.person_bd:after {
+  content: '';
+  display: block;
+  height: 80rpx;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  border-right: 1px solid #efefef;
+}
+
+.person_bd:nth-last-child(1):after {
+  display: none;
+}

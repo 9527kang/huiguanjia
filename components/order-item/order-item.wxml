@@ -1,0 +1,18 @@
+<view class='order_box'>
+  <view class='order_item flex_between'>
+    <image class='order_pic' src='/image/order_pic.png' mode='aspectFill' wx:if="{{show}}"></image>
+    <view class='order_mid flex_1'>
+      <view class='order_title text_ellipsis'>{{title}}</view>
+      <view class='order_txt'>{{dates}}</view>
+      <view class='order_txt'>{{room}}
+        <text class='order_status' wx:if="{{notice}}">{{status}}</text>
+      </view>
+    </view>
+    <navigator url='/pages/order_detail/order_detail' class='order_right' wx:if="{{isBtn}}">
+      <image class='order_btn' src='{{image}}' mode='aspectFit'></image>
+    </navigator>
+  </view>
+  <navigator url='{{urls}}' class='order_assess' wx:if="{{isAssess}}">
+    <van-button plain round size="mini" type='danger'>评价</van-button>
+  </navigator>
+</view>

@@ -1,0 +1,16 @@
+.border {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 auto 20rpx;
+  height: 62rpx;
+  line-height: 58rpx;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1rpx solid #e6e6e6;
+}
+
+.border.col {
+  color: #f44;
+  border-color: #f44;
+}

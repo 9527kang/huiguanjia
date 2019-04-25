@@ -1,0 +1,13 @@
+<view class="hall">
+  <image class='hall_pic' src='{{image}}' mode='aspectFill'></image>
+  <view class='hall_mid'>
+    <view class='hall_title text_ellipsis'>{{title}}</view>
+    <view class='hall_area'>面积：{{area}}平米</view>
+    <view class='hall_area'>最多容纳：{{number}}人</view>
+  </view>
+  <view class='hall_right'>
+    <view class='hall_price'>￥<text>{{price}}</text> / 全天</view>
+    <view class='hall_can'>参考价</view>
+    <van-button type='danger' size='small' custom-class='btnClas' round>特惠价</van-button>
+  </view>
+</view>

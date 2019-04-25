@@ -1,0 +1,10 @@
+<view class="login">
+  <view class='tips'>绑定手机号，即可查看订单详情</view>
+  <van-cell-group>
+    <van-field placeholder="密码" type="password"></van-field>
+    <van-field placeholder="再次输入密码" type="password"></van-field>
+  </van-cell-group>
+  <view class='login_btn'>
+    <van-button type='danger' size='large' custom-class='loginBtn' bind:click="resetPwd">确定提交</van-button>
+  </view>
+</view>

@@ -1,0 +1,34 @@
+<view class="join">
+  <van-field label="法人姓名" value="{{username}}" placeholder="例：张三" bind:change="usernameChange"></van-field>
+  <van-field label="身份证号" value="{{idcode}}" placeholder="410***************" bind:change="idcodeChange"></van-field>
+  <van-field label="酒店名称" value="{{names}}" placeholder="输入酒店名称" bind:change="namesChange"></van-field>
+  <van-field label="详细地址" value="{{addr}}" placeholder="输入详细地址" bind:change="addrChange"></van-field>
+  <van-cell title="所属类型" is-link value="{{types}}" bind:click="showType" bind:change="typesChange"></van-cell>
+  <van-field label="联系方式" placeholder="150xxxxxxxx" value="{{phone}}" bind:change="phoneChange"></van-field>
+  <view class='join_confirm'>
+    <view class='join_tips'>{{tips.desc}}</view>
+    <van-button type='danger' size="large" custom-class='join_btn' bind:click="onSure">提交</van-button>
+  </view>
+  <view class='join_steps'>
+    <van-steps steps="{{steps}}" active="{{1}}" active-color="#f44" />
+    <view class='join_tips'>接收后，我们将会以最的速度进行审核，成功/失败后我们将打电话联系您</view>
+  </view>
+</view>
+
+<van-popup show="{{ show }}" position="bottom" bind:close="onClose">
+  <view class="duration">
+  <view class='common_ht'>酒店类型</view>
+  <view class='duration_box'>
+    <!-- <van-row gutter="10">
+      <van-col span="12" wx:for="{{genre}}" wx:key="{{index}}" bindtap="setType" data-name="{{item.name}}">
+        <view class='bg'>{{item.name}}</view>
+      </van-col>
+    </van-row> -->
+    <van-row gutter="10">
+      <van-col span="12" wx:for="{{zanData}}" wx:key="{{index}}" bindtap="setType" data-name="{{item.name}}">
+        <view class='bg'>{{item.name}}</view>
+      </van-col>
+    </van-row>
+  </view>
+</view>
+</van-popup>

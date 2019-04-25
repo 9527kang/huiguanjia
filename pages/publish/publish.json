@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "需求提交成功",
+  "usingComponents": {
+    "van-icon": "/dist/icon/index",
+    "van-steps": "/dist/steps/index",
+    "van-button": "/dist/button/index"
+  }
+}

@@ -1,0 +1,28 @@
+<view class="draw">
+  <view class='top'>
+    <image class='icon' src='/image/icon_withdraw.png' mode='aspectFit'></image>
+    <view class='txt'>
+      ￥{{cashData.money}}
+    </view>
+  </view>
+  <view class='btm'>
+
+    <van-cell-group>
+      <view class='mar_btm'>
+        <van-field label="可提现金额" readonly value="￥{{cashData.money}}"></van-field>
+        <van-field label="本次提现" placeholder="输入提现金额" bind:change="drawMoney"></van-field>
+      </view>
+      <view class='mar_btm'>
+        <van-field label="提现账户" readonly value="微信零钱包"></van-field>
+      </view>
+    </van-cell-group>
+    <view class='draw_btn'>
+      <van-button type='primary' size='large' custom-class='draw_btn' bind:click="drawBtn">提现</van-button>
+    </view>
+
+    <view class="p12">
+      <rich-text nodes="{{cashData.desc}}"></rich-text>
+    </view>
+  </view>
+
+</view>

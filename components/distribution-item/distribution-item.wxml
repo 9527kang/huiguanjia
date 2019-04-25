@@ -1,0 +1,18 @@
+<view class="box flex">
+  <image class='pic' src='{{srcs}}' mode='aspectFill'></image>
+  <view class='flex_1'>
+    <view class='flex_between'>
+      <view class='left'>
+        <view class='title'>{{heng}}</view>
+        <view class='id'>ID:{{ids}}</view>
+      </view>
+      <view class='right'>
+        <view class='flex' wx:if="{{show}}">
+          <image class='icon_person' src='{{persons}}' mode='aspectFit'></image>
+          <text class='num'>{{num}}</text>
+          <image class='icon' src='{{icon_right}}' mode='aspectFit'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

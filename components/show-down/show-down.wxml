@@ -1,0 +1,5 @@
+<!--components/show-down/show-down.wxml-->
+<view class='show'>
+  <text class='title'>{{title}}</text>
+  <image class='icon' src='/image/icon_arrow_down.png' mode='aspectFit'></image>
+</view>

@@ -1,0 +1,10 @@
+<view class="city">
+  <view class='common_ht'>选择城市</view>
+  <view class='city_box'>
+    <van-row>
+      <van-col span="6" wx:for="{{city}}" wx:key="{{index}}" custom-class="bg" bindtap="toSearch" data-name="{{item.c_name}}" data-cid="{{item.cid}}">
+        <view>{{item.c_name}}</view>
+      </van-col>
+    </van-row>
+  </view>
+</view>

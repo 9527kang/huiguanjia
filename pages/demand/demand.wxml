@@ -1,0 +1,23 @@
+<view class="duration">
+  <view class='common_ht'>会议需求</view>
+  <view class='kind_box'>
+    <!-- <van-row gutter="10" custom-class="wrap">
+      <van-col span="24" wx:for="{{ment}}" wx:key="{{index}}" custom-class="bg" bindtap="toIndex" data-name="{{item.name}}">
+        <view>{{item.name}}</view>
+      </van-col>
+    </van-row> -->
+    <van-checkbox-group value="{{ result }}" bind:change="onChange">
+      <van-cell-group>
+        <van-cell wx:for="{{ ment }}" wx:key="index" title="{{ item.name }}" clickable data-name="{{ item.name }}" data-id="{{ item.id }}" bind:click="toggle">
+          <van-checkbox catch:tap="noop" class="checkboxes-{{ item.id }}" name="{{ item.name }}" />
+        </van-cell>
+      </van-cell-group>
+    </van-checkbox-group>
+
+  </view>
+
+
+  <view class="kind_box">
+    <van-button type="danger" size="large" bind:click="toIndex">确定</van-button>
+  </view>
+</view>

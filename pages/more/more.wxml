@@ -1,0 +1,68 @@
+<view class='search'>
+  <!-- 搜索框 -->
+  <view class='search_top'>
+    <view class='search_left'>
+      <show-down title="郑州"></show-down>
+    </view>
+    <view class='search_right'>
+      <van-search placeholder="目的地、酒店名称、关键词" background="transparent"></van-search>
+    </view>
+  </view>
+
+  <!-- 搜索分类 -->
+  <view class='search_list'>
+    <van-row>
+      <van-col span="8">
+        <show-down title="区域" bindtap="showArea"></show-down>
+      </van-col>
+      <van-col span="8">
+        <show-down title="推荐顺序" bindtap="showTurn"></show-down>
+      </van-col>
+      <van-col span="8">
+        <show-down title="分类筛选" bindtap="showFilter"></show-down>
+      </van-col>
+    </van-row>
+  </view>
+
+  <!-- 酒店列表 -->
+  <view class='hotel_list'>
+    <block wx:for="{{5}}" wx:key="{{index}}">
+      <hotel-item title="郑州红山楂树酒店" src="/image/common_pic.png" location="金水区" rank="四星级酒店" sum="22"></hotel-item>
+    </block>
+  </view>
+
+  <!-- 没数据 -->
+  <view class='no_data'>没有更多数据~</view>
+</view>
+
+<!-- 区域弹窗 -->
+<van-popup show="{{area}}" bind:close="onClose" position="bottom">
+  <van-tree-select items="{{ itemsArea }}" main-active-index="{{ mainActiveIndex }}" active-id="{{ activeId }}" bind:click-nav="onClickNav" bind:click-item="onClickItem" />
+</van-popup>
+
+<!-- 推荐顺序弹窗 -->
+<van-popup show="{{turn}}" bind:close="onClose" position="bottom">
+  <van-picker columns="{{ columns }}" bind:change="onChange" />
+</van-popup>
+
+<!-- 分类筛选弹窗 -->
+<van-popup show="{{filter}}" bind:close="onClose" position="bottom">
+  <view class='common_ht'>场地类型</view>
+  <view class='pad20'>
+    <chang-clas arrData="{{ places }}" active="{{ 2 }}" bind:click="getid"></chang-clas>
+  </view>
+  <view class='common_ht'>容纳人数</view>
+  <view class='pad20'>
+    <chang-clas arrData="{{ peoples }}" active="{{ 2 }}" bind:click="getid"></chang-clas>
+  </view>
+  <view class='filter'>
+    <van-row gutter="10">
+      <van-col span="12">
+        <van-button type='danger' size='large' plain round custom-class="filter_btn">重置</van-button>
+      </van-col>
+      <van-col span="12">
+        <van-button type='danger' size='large' round custom-class="filter_btn">确定</van-button>
+      </van-col>
+    </van-row>
+  </view>
+</van-popup>

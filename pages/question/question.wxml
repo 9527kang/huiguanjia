@@ -1,0 +1,17 @@
+<view class="question">
+  <view class="common_ht">
+    常见问题
+  </view>
+  <view class="cont">
+    <van-cell-group>
+      <block wx:for="{{problemList}}" wx:key="{{index}}">
+        <van-cell title="{{item.name}}" is-link url="/pages/question_detail/question_detail?id={{item.id}}"></van-cell>
+      </block>
+    </van-cell-group>
+    <view class="no_data">
+      暂无更多数据~
+    </view>
+      
+  </view>
+    
+</view>

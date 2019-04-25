@@ -1,0 +1,13 @@
+<view class="login">
+  <image class='logo' src='/image/icon_logo.png' mode='aspectFit'></image>
+  <view class='method'>
+    <button class='wechat' bindgetuserinfo="onGetUserInfor" open-type="getUserInfo">
+      <image class='icon_wechat' src='/image/icon_wechat.png' mode='aspectFit'></image>微信登录
+    </button>
+    <view class='phone'>
+      <navigator url='/pages/login/login'>
+        使用手机号登录
+      </navigator>
+    </view>
+  </view>
+</view>

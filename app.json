@@ -1,0 +1,83 @@
+{
+  "pages": [
+    "pages/market/market",
+    "pages/person/person",
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/login_choice/login_choice",
+    "pages/infor/infor",
+    "pages/regist/regist",
+    "pages/login/login",
+    "pages/forget/forget",
+    "pages/order/order",
+    "pages/issue/issue",
+    "pages/withdraw/withdraw",
+    "pages/draw_list/draw_list",
+    "pages/friends/friends",
+    "pages/team/team",
+    "pages/join/join",
+    "pages/join_success/join_success",
+    "pages/hotel_type/hotel_type",
+    "pages/question/question",
+    "pages/question_detail/question_detail",
+    "pages/location/location",
+    "pages/search/search",
+    "pages/city_hotel/city_hotel",  
+    "pages/more/more",
+    "pages/duration/duration",
+    "pages/demand/demand",
+    "pages/budget/budget",
+    "pages/numb/numb",
+    "pages/kind/kind",
+    "pages/city/city",
+    "pages/reset/reset",  
+    "pages/hotel_detail/hotel_detail",
+    "pages/order_detail/order_detail",  
+    "pages/distributionDetail/distributionDetail",       
+    "pages/leave/leave",    
+    "pages/publish/publish",
+    "pages/activity/activity",
+    "pages/hall_detail/hall_detail",
+    "pages/assess/assess"    
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "请点击确定"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "会管家",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8c8c8c",
+    "selectedColor": "#ff6969",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "iconPath": "/image/icon_home.png",
+        "selectedIconPath": "/image/icon_home_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "iconPath": "/image/icon_search.png",
+        "selectedIconPath": "/image/icon_search_active.png",
+        "text": "找场地"
+      },
+      {
+        "pagePath": "pages/location/location",
+        "iconPath": "/image/icon_location.png",
+        "selectedIconPath": "/image/icon_location_active.png",
+        "text": "附近场地"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "iconPath": "/image/icon_person.png",
+        "selectedIconPath": "/image/icon_person_active.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+<view class="duration">
+  <view class='common_ht'>酒店类型</view>
+  <view class='duration_box'>
+    <van-row gutter="10">
+      <van-col span="12" wx:for="{{number}}" wx:key="{{index}}" bindtap="toIndex" data-name="{{item.name}}">
+        <view class='bg'>{{item.name}}</view>
+      </van-col>
+    </van-row>
+  </view>
+</view>

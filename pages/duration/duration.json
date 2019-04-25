@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "会议时长",
+  "usingComponents": {
+    "van-row": "/dist/row/index",
+    "van-col": "/dist/col/index",
+    "van-cell": "/dist/cell/index",
+    "van-datetime-picker": "/dist/datetime-picker/index",
+    "van-popup": "/dist/popup/index",
+    "van-button": "/dist/button/index"
+  }
+}

@@ -1,0 +1,55 @@
+.flex_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex_1 {
+  flex: 1;
+  overflow: hidden;
+}
+
+.text_ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.order_box {
+  border-bottom: 1px solid #e6e6e6;
+  background-color: #fff;
+}
+
+.order_item {
+  padding: 30rpx;
+}
+
+.order_pic {
+  width: 112rpx;
+  height: 112rpx;
+  margin-right: 20rpx;
+}
+
+.order_right {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.order_btn {
+  width: 48rpx;
+  height: 8rpx;
+}
+
+.order_txt {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.order_status {
+  margin-left: 12rpx;
+}
+
+.order_assess {
+  text-align: right;
+  padding: 0 24rpx 24rpx;
+}

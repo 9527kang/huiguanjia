@@ -1,0 +1,24 @@
+/* pages/assess/assess.wxss */
+.assess_item {
+  display: flex;
+  padding: 30rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.assess_thumb {
+  width: 86rpx;
+  height: 86rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 24rpx;
+}
+
+.assess_txt {
+  flex: 1;
+  overflow: hidden;
+}
+
+.assess_rate {
+  padding: 20rpx 0!important;
+}

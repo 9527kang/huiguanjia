@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "个人信息",
+  "usingComponents": {
+    "van-cell": "/dist/cell/index",
+    "van-field": "/dist/field/index",
+    "van-cell-group": "/dist/cell-group/index",
+    "van-radio": "/dist/radio/index",
+    "van-radio-group": "/dist/radio-group/index",
+    "van-button": "/dist/button/index"
+  }
+}

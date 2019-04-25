@@ -1,0 +1,52 @@
+<view class="order">
+  <view class='order_list'>
+    <view class='order_item'>
+      <view class='title'>订单编号</view>
+      <view class='cont'>{{detailData.code}}</view>
+    </view>
+    <view class='order_item'>
+      <view class='title'>酒店名称</view>
+      <view class='cont'>{{detailData.hotel}}</view>
+    </view>
+    <view class='order_item'>
+      <view class='title'>会议类型</view>
+      <view class='cont'>{{detailData.room_type}}</view>
+    </view>
+    <view class='order_item'>
+      <view class='title'>会议时长</view>
+      <view class='cont'>{{detailData.dates}}</view>
+    </view>
+    <view class='order_item'>
+      <view class='title'>参加人数</view>
+      <view class='cont'>{{detailData.number}}人</view>
+    </view>
+    <view class='order_item'>
+      <view class='title'>会议预算</view>
+      <view class='cont'>{{detailData.price}}</view>
+    </view>
+    <view class='order_item'>
+      <view class='title'>会议需求</view>
+      <view class='cont'>{{detailData.ment}}</view>
+    </view>
+    <view class='order_item'>
+      <view class='title'>备注</view>
+      <view class='cont'>[日期]2019年3月1日,半天或者一天,档期已定</view>
+    </view>
+  </view>
+  <view class=''>
+    <van-cell title="接单流程" border="{{false}}"></van-cell>
+    <view class='order_step'>
+      <van-steps steps="{{steps}}" active="{{active}}" active-color="#f44"></van-steps>
+    </view>
+  </view>
+
+  <view class='order_show'>
+    <van-cell title="已有6家酒店接单" border="{{false}}"></van-cell>
+    <view class='order_list'>
+      <view class='order_item' wx:for="{{4}}" wx:key="{{index}}">
+        <view class='title'>酒店名称</view>
+      </view>
+    </view>
+  </view>
+
+</view>

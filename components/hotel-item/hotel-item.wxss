@@ -1,0 +1,33 @@
+/* components/hotel-item/hotel-item.wxss */
+.text_ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.hotel {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  border-bottom: 1px solid #efefef;
+  background-color: #fff;
+}
+.hotel_thumb {
+  width: 264rpx;
+  height: 172rpx;
+  margin-right: 20rpx;
+  overflow: hidden;
+}
+.hotel_txt {
+  flex: 1;
+  overflow: hidden;
+}
+.hotel_title {
+  font-size: 16px;
+  margin-bottom: 16rpx;
+}
+.hotel_btm {
+  color: #8c8c8c;
+}
+.hotel_location {
+  margin-right: 12rpx;
+}

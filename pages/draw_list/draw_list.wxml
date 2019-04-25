@@ -1,0 +1,15 @@
+<view class="jilu">
+  <block wx:for="{{drawData}}" wx:key="{{index}}">
+    <view class='jilu_box flex_between'>
+      <view class='left flex_1'>
+        <view class='title'>提现</view>
+        <view class='date'>余额：{{item.balance}}</view>
+      </view>
+      <view class='right'>
+        <view class='date'>{{item.time}}</view>
+        <view class='count'>-{{item.money}}</view>
+      </view>
+    </view>
+  </block>
+  <view class='no_data'>没有更多记录~</view>
+</view>

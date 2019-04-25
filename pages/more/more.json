@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "更多场地",
+  "usingComponents": {
+    "show-down": "/components/show-down/show-down",
+    "van-search": "/dist/search/index",
+    "van-row": "/dist/row/index",
+    "van-col": "/dist/col/index",
+    "hotel-item": "/components/hotel-item/hotel-item",
+    "van-popup": "/dist/popup/index",
+    "van-button": "/dist/button/index",
+    "van-tree-select": "/dist/tree-select/index",
+    "van-picker": "/dist/picker/index",
+    "chang-clas": "/components/changClas/changClas"
+  }
+}

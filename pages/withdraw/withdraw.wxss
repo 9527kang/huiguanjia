@@ -1,0 +1,21 @@
+/* pages/withdraw/withdraw.wxss */
+.top {
+   text-align: center;
+   overflow: hidden;
+}
+
+.icon {
+  width: 238rpx;
+  height: 238rpx;
+  display: block;
+  margin: 60rpx auto 40rpx;
+}
+
+.txt {
+  margin-bottom: 40rpx;
+  font-size: 30px;
+}
+
+.draw_btn {
+  padding: 24rpx;
+}

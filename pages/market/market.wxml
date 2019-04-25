@@ -1,0 +1,14 @@
+<view class="flex_normal flex_wrap">
+	<navigator class="cell align_center p12">
+		<image class="thumb inline_block mar_btm_6" src="/image/pic_bao.png" />
+		<view>红包</view>
+	</navigator>
+	<navigator class="cell align_center p12">
+		<image class="thumb inline_block mar_btm_6" src="/image/pic_pan.png" />
+		<view>大转盘</view>
+	</navigator>
+	<navigator class="cell align_center p12">
+		<image class="thumb inline_block mar_btm_6" src="/image/pic_yao.png" />
+		<view>摇一摇</view>
+	</navigator>
+</view>

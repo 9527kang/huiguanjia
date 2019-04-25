@@ -1,0 +1,9 @@
+<!--pages/question_detail/question_detail.wxml-->
+<view class="common_ht">
+	{{detail.name}}
+</view>
+<view class="p12">
+	<rich-text nodes="{{detail.desc}}"></rich-text>
+</view>
+  
+  

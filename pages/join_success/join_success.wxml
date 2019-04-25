@@ -1,0 +1,10 @@
+<view class="join">
+	<view class='join_steps'>
+		<van-steps steps="{{steps}}" active="{{1}}" active-color="#f44" />
+		<view class='join_tips'>{{tips.desc}}</view>
+	</view>
+	<navigator url="/pages/person/person" open-type="switchTab">
+		<van-button type="danger" size="large">返回个人中心</van-button>
+	</navigator>
+	  
+</view>

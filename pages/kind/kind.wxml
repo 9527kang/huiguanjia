@@ -1,0 +1,11 @@
+<view class="kind">
+  <view class='common_ht'>会议类型</view>
+  <view class='kind_box'>
+    <van-row gutter="20" custom-class="wrap">
+      <van-col span="24" wx:for="{{type}}" wx:key="{{index}}" custom-class="kind_clas" data-name="{{item.name}}" bindtap="toIndex">
+        {{item.name}}
+      </van-col>
+    </van-row>
+  </view>
+
+</view>

@@ -1,0 +1,29 @@
+/* pages/issue/issue.wxss */
+page {
+  padding-bottom: 100rpx;
+}
+
+.issue_cell {
+  align-items: center;
+  padding: 30rpx 20rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.issue_thumb {
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 20rpx;
+}
+
+.area_ht {
+  height: 240rpx!important;
+}
+
+.issue_btn {
+  position: fixed!important;
+  bottom: 0!important;
+  left: 0!important;
+  width: 100%!important;
+  background-color: #FF6969!important;
+}
